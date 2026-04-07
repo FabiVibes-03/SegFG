@@ -1,4 +1,4 @@
-# 🖥️ TabletMonitor
+# 🖥️ SegFG
 
 > Sistema de monitoreo y seguridad en tiempo real para flotas de dispositivos Windows en red.
 
@@ -9,9 +9,9 @@
 
 ---
 
-## ¿Qué es TabletMonitor?
+## ¿Qué es SegFG?
 
-TabletMonitor es una solución completa de monitoreo y seguridad para flotas de tablets o computadoras Windows. Permite a los administradores visualizar en tiempo real el estado de cada dispositivo, recibir alertas automáticas ante situaciones de riesgo y ejecutar acciones remotas como bloqueo de pantalla o apagado.
+SegFG es una solución completa de monitoreo y seguridad para flotas de tablets o computadoras Windows. Permite a los administradores visualizar en tiempo real el estado de cada dispositivo, recibir alertas automáticas ante situaciones de riesgo y ejecutar acciones remotas como bloqueo de pantalla o apagado.
 
 Diseñado para entornos donde se necesita mantener control sobre dispositivos compartidos o de campo, como escuelas, bodegas, clínicas, puntos de venta o cualquier organización con múltiples equipos Windows en red.
 
