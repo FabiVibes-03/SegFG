@@ -1,0 +1,46 @@
+# ─────────────────────────────────────────────
+# TabletMonitor — .gitignore
+# ─────────────────────────────────────────────
+
+# ── Python / Backend ──────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+.env               # ← contiene contraseñas, NO subir
+*.egg-info/
+dist/
+build/
+
+# ── Node / Dashboard ──────────────────────────
+node_modules/
+dist/
+.vite/
+*.local
+
+# ── C# / Agente ───────────────────────────────
+agent/bin/
+agent/obj/
+agent/publish/
+*.user
+*.suo
+.vs/
+
+# ── Base de datos ─────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ── Sistema operativo ─────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDEs ──────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo

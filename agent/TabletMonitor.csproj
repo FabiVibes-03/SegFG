@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RootNamespace>TabletMonitor</RootNamespace>
+    <AssemblyName>TabletMonitor</AssemblyName>
+    <!-- Compilar como ejecutable sin ventana -->
+    <OutputType>exe</OutputType>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Windows Service support -->
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="8.0.0" />
+    <!-- HTTP client -->
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+    <!-- JSON -->
+    <PackageReference Include="System.Text.Json" Version="8.0.0" />
+    <!-- WMI para telemetría de hardware -->
+    <PackageReference Include="System.Management" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>

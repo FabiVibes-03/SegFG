@@ -1,0 +1,214 @@
+/* ─────────────────────────────────────────────────────
+   TabletMonitor — Design System
+   Estética: industrial / sala de control / terminal
+   ───────────────────────────────────────────────────── */
+
+:root {
+    --bg-base: #0a0c0f;
+    --bg-panel: #111418;
+    --bg-card: #161b22;
+    --bg-hover: #1c2330;
+    --border: #21262d;
+    --border-accent: #30363d;
+
+    --text-primary: #e6edf3;
+    --text-secondary: #8b949e;
+    --text-muted: #484f58;
+
+    --green: #3fb950;
+    --green-dim: #1a3a20;
+    --yellow: #d29922;
+    --yellow-dim: #3a2e0a;
+    --red: #f85149;
+    --red-dim: #3a1a1a;
+    --blue: #58a6ff;
+    --blue-dim: #1a2a3a;
+    --orange: #e3632a;
+    --orange-dim: #3a1f0a;
+
+    --font-mono: 'Space Mono', monospace;
+    --font-sans: 'DM Sans', sans-serif;
+
+    --radius: 6px;
+    --radius-lg: 10px;
+    --transition: 150ms ease;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    background: var(--bg-base);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-base);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-accent);
+    border-radius: 3px;
+}
+
+/* Links */
+a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Botones base */
+button {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    cursor: pointer;
+    border: none;
+    border-radius: var(--radius);
+    padding: 6px 14px;
+    transition: all var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-primary {
+    background: var(--blue);
+    color: #000;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: #79b8ff;
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+}
+
+.btn-ghost:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+    border-color: var(--border-accent);
+}
+
+.btn-danger {
+    background: transparent;
+    color: var(--red);
+    border: 1px solid var(--red-dim);
+}
+
+.btn-danger:hover {
+    background: var(--red-dim);
+}
+
+.btn-warn {
+    background: transparent;
+    color: var(--yellow);
+    border: 1px solid var(--yellow-dim);
+}
+
+.btn-warn:hover {
+    background: var(--yellow-dim);
+}
+
+/* Inputs */
+input,
+select {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    background: var(--bg-base);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 7px 11px;
+    outline: none;
+    transition: border-color var(--transition);
+    width: 100%;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--blue);
+}
+
+/* Card / Panel */
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+}
+
+/* Mono label */
+.mono {
+    font-family: var(--font-mono);
+    font-size: 12px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 200ms ease forwards;
+}
+
+/* Pulse para alertas */
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+.pulse {
+    animation: pulse 1.8s ease infinite;
+}
+
+/* Leaflet override */
+.leaflet-container {
+    background: #0d1117 !important;
+    font-family: var(--font-sans) !important;
+}
+
+.leaflet-tile {
+    filter: brightness(0.7) saturate(0.5);
+}
